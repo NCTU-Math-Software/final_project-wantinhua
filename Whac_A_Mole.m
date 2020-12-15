@@ -1,5 +1,6 @@
-%打維尼的遊戲，用鍵盤的1~9打
+%打維尼的遊戲，用鍵盤的1~9或滑鼠左鍵打
 %打對的話維尼會爆炸
+%打錯就結束
 withnum=imread('back_with_num.png');
 back=imread('back.png');
 mole=imread('mole.png');
@@ -33,6 +34,10 @@ while exit_game==0
         case{3}
             x=231;y=246;
     end
+    %
+    b_and_m(x+30:x+49,y:y+49,:)=mole(1:20,:,:);
+    image(b_and_m);
+    pause(0.3);
     b_and_m(x:x+49,y:y+49,:)=mole;
     image(b_and_m);
     text(-10,-10,'point:','FontWeight','bold','FontSize',16);
@@ -56,6 +61,8 @@ while exit_game==0
         exit_game=1;
     end
 end
-game_over=imread('game_over.png');
+game_over=imread('game_over.jpg');
 image(game_over);
-text(0, 300, 'GAME OVER','FontWeight','bold','FontSize',48,'color','r');
+text(50, 500, 'GAME OVER','FontWeight','bold','FontSize',48,'color','c');
+text(400,900,'point:','FontWeight','bold','FontSize',16,'color','c');
+text(600, 900, int2str(point),'FontWeight','bold','FontSize',16,'color','c');
