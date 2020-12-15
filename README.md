@@ -6,3 +6,6 @@ final_project-wantinhua created by GitHub Classroom
 用鍵盤打
 
 結束時會有負片維尼，小心嚇到
+
+來源:維尼都是來自迪士尼網站
+其他圖片來自線上免費圖庫
