@@ -1,5 +1,5 @@
-%¥´ºû¥§ªº¹CÀ¸¡A¥ÎÁä½Lªº1~9¥´
-%¥´¹ïªº¸Üºû¥§·|Ãz¬µ
+%æ‰“ç¶­å°¼çš„éŠæˆ²ï¼Œç”¨éµç›¤çš„1~9æ‰“
+%æ‰“å°çš„è©±ç¶­å°¼æœƒçˆ†ç‚¸
 withnum=imread('back_with_num.png');
 back=imread('back.png');
 mole=imread('mole.png');
@@ -11,6 +11,7 @@ pause(1)
 clear withnum
 while exit_game==0
     b_and_m=back;
+    hit=0;
     position=randi(9,1);
     switch position
         case{7}
@@ -37,8 +38,16 @@ while exit_game==0
     text(-10,-10,'point:','FontWeight','bold','FontSize',16);
     text(50, -10, int2str(point),'FontWeight','bold','FontSize',16);
     [X,Y,BUTTON] = ginput(1);
-    clear X Y
-    if BUTTON-48==position
+    if BUTTON==1
+        if X>=y && X<y+50
+            if Y>=x && Y<x+50
+                hit=1;
+            end
+        end
+    else
+        clear X Y
+    end
+    if BUTTON-48==position || hit==1
         point=point+1;
         b_and_m(x:x+49,y:y+49,:)=boom;
         image(b_and_m);
