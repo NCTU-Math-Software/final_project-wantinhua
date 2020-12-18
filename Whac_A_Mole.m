@@ -5,6 +5,7 @@ withnum=imread('back_with_num.png');
 back=imread('back.png');
 mole=imread('mole.png');
 boom=imread('boom.png');
+[s, fs]=audioread('score.wav');
 point=0;
 exit_game=0;
 image(withnum);
@@ -55,14 +56,16 @@ while exit_game==0
     if BUTTON-48==position || hit==1
         point=point+1;
         b_and_m(x:x+49,y:y+49,:)=boom;
+        sound(s, fs);
         image(b_and_m);
         pause(0.5);
     else
         exit_game=1;
     end
 end
+text(25, 150, 'GAME OVER','FontWeight','bold','FontSize',48,'color','r');
+pause(1);
 game_over=imread('game_over.jpg');
 image(game_over);
-text(50, 500, 'GAME OVER','FontWeight','bold','FontSize',48,'color','c');
-text(400,900,'point:','FontWeight','bold','FontSize',16,'color','c');
-text(600, 900, int2str(point),'FontWeight','bold','FontSize',16,'color','c');
+text(400,-50,'point:','FontWeight','bold','FontSize',16,'color','r');
+text(600, -50, int2str(point),'FontWeight','bold','FontSize',16,'color','r');
