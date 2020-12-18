@@ -5,11 +5,17 @@ withnum=imread('back_with_num.png');
 back=imread('back.png');
 mole=imread('mole.png');
 boom=imread('boom.png');
+virus=imread('virus.png');
 [s, fs]=audioread('score.wav');
 point=0;
 exit_game=0;
 image(withnum);
-pause(1)
+text(25, 150, 'READY','FontWeight','bold','FontSize',48,'color','r');
+pause(0.5);
+text(225, 150, 'GO','FontWeight','bold','FontSize',48,'color','r');
+pause(0.5);
+image(withnum);
+pause(1);
 clear withnum
 while exit_game==0
     b_and_m=back;
@@ -35,12 +41,21 @@ while exit_game==0
         case{3}
             x=231;y=246;
     end
-    %
-    b_and_m(x+30:x+49,y:y+49,:)=mole(1:20,:,:);
-    image(b_and_m);
-    pause(0.3);
-    b_and_m(x:x+49,y:y+49,:)=mole;
-    image(b_and_m);
+    enemy=rand(1);
+    if enemy>=0.1
+        b_and_m(x+30:x+49,y:y+49,:)=mole(1:20,:,:);
+        image(b_and_m);
+        pause(0.3);
+        b_and_m(x:x+49,y:y+49,:)=mole;
+        image(b_and_m);  
+    else
+        b_and_m(x+30:x+49,y:y+49,:)=virus(1:20,:,:);
+        image(b_and_m);
+        pause(0.3);
+        b_and_m(x:x+49,y:y+49,:)=virus;
+        image(b_and_m);
+    end
+
     text(-10,-10,'point:','FontWeight','bold','FontSize',16);
     text(50, -10, int2str(point),'FontWeight','bold','FontSize',16);
     [X,Y,BUTTON] = ginput(1);
@@ -54,7 +69,11 @@ while exit_game==0
         clear X Y
     end
     if BUTTON-48==position || hit==1
-        point=point+1;
+        if enemy>=0.1
+            point=point+1;
+        else
+            point=point+5;
+        end
         b_and_m(x:x+49,y:y+49,:)=boom;
         sound(s, fs);
         image(b_and_m);
