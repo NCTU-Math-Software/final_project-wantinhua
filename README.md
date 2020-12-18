@@ -1,7 +1,7 @@
 # final_project-wantinhua
 final_project-wantinhua created by GitHub Classroom
 
-我是project 7的打地鼠遊戲。\n
+我是project 7的打地鼠遊戲。
 地鼠是維尼
 用鍵盤或滑鼠左鍵打
 
