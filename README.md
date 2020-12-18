@@ -1,15 +1,17 @@
 # final_project-wantinhua
 final_project-wantinhua created by GitHub Classroom
 
-我是project 7的打地鼠遊戲
+我是做打地鼠遊戲
 
-地鼠是維尼
+要玩的話，請執行Whac_A_Mole.m。並把在資料夾裡面的圖檔和音檔放進matlab資料夾。
+
+地鼠是維尼，如果你運氣夠好，還可能遇到病毒喔
 
 用鍵盤或滑鼠左鍵打
 
-打到一隻得一分
+打到一隻得一分，病毒五分
 
-若打錯洞或是用鍵盤1~9、滑鼠右鍵以外的打就結束遊戲
+若打錯洞或是用錯誤的鍵打就結束遊戲
 
 有音效，如果沒有接聲音的話會一直跳警告
 
