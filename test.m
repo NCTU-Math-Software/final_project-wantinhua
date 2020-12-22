@@ -17,6 +17,7 @@ pause(0.5);
 image(withnum);
 pause(1);
 clear withnum
+global hit
 %
 while exit_game==0
     hit=0;
@@ -76,7 +77,7 @@ while exit_game==0
     hold on
     while et<t
         et = etime(clock, t0);
-        fig = figure('KeyPressFcn',@callback);
+        figure('KeyPressFcn',@callback);
     end
     hold off
     if hit==position
@@ -103,26 +104,27 @@ text(400,-50,'point:','FontWeight','bold','FontSize',16,'color','r');
 text(600, -50, int2str(point),'FontWeight','bold','FontSize',16,'color','r');
 %
 function callback(~,event)
-key = event.Key;  %由控制事件event中取得按下的按鍵Key
-switch key        %針對不同的按鍵做不同的動作
-case '1'
-hit=1; 
-case '2'
-hit=2;
-case '3'
-hit=3;
-case '4'
-hit=4;
-case '5'
-hit=5; 
-case '6'
-hit=6;
-case '7'
-hit=7;
-case '8'
-hit=8;
-case '9'
-hit=9;
-end
+    global hit
+    key = event.Key;  %由控制事件event中取得按下的按鍵Key
+    switch key        %針對不同的按鍵做不同的動作
+    case 'numpad1'
+    hit=1; 
+    case 'numpad2'
+    hit=2;
+    case 'numpad3'
+    hit=3;
+    case 'numpad4'
+    hit=4;
+    case 'numpad5'
+    hit=5; 
+    case 'numpad6'
+    hit=6;
+    case 'numpad7'
+    hit=7;
+    case 'numpad8'
+    hit=8;
+    case 'numpad9'
+    hit=9;
+    end
 end
 end
