@@ -10,7 +10,7 @@
 
 有音效，如果沒有接聲音的話會一直跳警告
 
-# 普通版
+## 普通版
 
 
 要玩的話，請執行Whac_A_Mole.m。並把在資料夾裡面的圖檔和音檔放進matlab資料夾。
@@ -21,25 +21,35 @@
 
 怕閃太快，這裡先解釋一下
 
- 7       8       9
+ 7    　   8   　    9
  
- ●       ●       ●
+ ●   　    ●    　  ●
  
- 4       5       6
+ 4    　   5    　   6
 
- ●       ●       ●
+ ●     　  ●    　   ●
  
- 1       2       3
+ 1   　   2    　   3
  
- ●       ●       ●
+ ●    　   ●   　   ●
  
- 其實如果你有右邊的九宮格鍵盤就很簡單
+其實如果你有右邊的九宮格鍵盤就很簡單
 
-不只打錯洞，用錯誤的鍵打也會結束遊戲
+看到地鼠，對著對應的洞按數字就對了
+
+不只打錯洞，用錯誤的鍵打也會結束遊戲(比如滑鼠右鍵)
 
 地鼠會在那邊等到你打，不用怕打不到
 
+## 難一點點版
 
+要玩的話，請跑Whac_A_Mole_num.m的函式。並把在資料夾裡面的圖檔和音檔放進matlab資料夾。
+
+這個版本只能用鍵盤打，反正人類只用滑鼠應該跟不上這邊地鼠的速度
+
+用的鍵跟普通版一樣是數字1~9
+
+地鼠探出頭後過一下就會不見
 
 
 
@@ -53,5 +63,16 @@ https://disney.com.tw/
 其他圖片來自線上免費圖庫
 https://zh.pngtree.com/
 
+調整圖片大小時借用了影像調整網站的幫忙
+https://www.iloveimg.com/zh-tw/resize-image
+
 得分時的音效來自效果音素材網站
 https://maoudamashii.jokersounds.com/
+
+參考了C.Y.C的MATLAB多重案件處理
+
+https://yuchungchuang.wordpress.com/2017/08/07/matlab-%e5%a4%9a%e9%87%8d%e6%8c%89%e9%8d%b5%e4%ba%8b%e4%bb%b6%e7%9a%84%e8%99%95%e7%90%86keypressfcn/
+
+還參考了張智星老師的MATLAB教學
+http://mirlab.org/jang/books/matlabprogramming4beginner/
+
