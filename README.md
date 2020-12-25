@@ -72,7 +72,7 @@ https://www.iloveimg.com/zh-tw/resize-image
 得分時的音效來自效果音素材網站
 https://maoudamashii.jokersounds.com/
 
-參考了C.Y.C的MATLAB多重案件處理
+參考了C.Y.C的MATLAB多重按鍵處理
 
 https://yuchungchuang.wordpress.com/2017/08/07/matlab-%e5%a4%9a%e9%87%8d%e6%8c%89%e9%8d%b5%e4%ba%8b%e4%bb%b6%e7%9a%84%e8%99%95%e7%90%86keypressfcn/
 
