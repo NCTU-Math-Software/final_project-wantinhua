@@ -1,6 +1,4 @@
-%打維尼的遊戲，用鍵盤的1~9或滑鼠左鍵打
-%打對的話維尼會爆炸
-%打錯就結束
+
 withnum=imread('back_with_num.png');
 back=imread('back.png');
 mole=imread('mole.png');
