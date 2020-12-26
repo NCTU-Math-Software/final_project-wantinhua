@@ -78,7 +78,7 @@ text(600, -50, int2str(point),'FontWeight','bold','FontSize',16,'color','r');
 %
 function kpfcn(obj,event)
 switch event.Key
-case 'numpad1'
+case {'numpad1','1'}
     if position==1
         if enemy>=0.1
             point=point+1;
@@ -92,7 +92,7 @@ case 'numpad1'
     else
         exit_game=1;
     end
-case 'numpad2'
+case {'numpad2','2'}
     if position==2
         if enemy>=0.1
             point=point+1;
@@ -106,7 +106,7 @@ case 'numpad2'
     else
         exit_game=1;
     end
-case 'numpad3'
+case {'numpad3','3'}
     if position==3
         if enemy>=0.1
             point=point+1;
@@ -120,7 +120,7 @@ case 'numpad3'
     else
         exit_game=1;
     end
-case 'numpad4'
+case {'numpad4','4'}
     if position==4
         if enemy>=0.1
             point=point+1;
@@ -134,7 +134,7 @@ case 'numpad4'
     else
         exit_game=1;
     end
-case 'numpad5'
+case {'numpad5','5'}
     if position==5
         if enemy>=0.1
             point=point+1;
@@ -148,7 +148,7 @@ case 'numpad5'
     else
         exit_game=1;
     end
-case 'numpad6'
+case {'numpad6','6'}
     if position==6
         if enemy>=0.1
             point=point+1;
@@ -162,7 +162,7 @@ case 'numpad6'
     else
         exit_game=1;
     end
-case 'numpad7'
+case {'numpad7','7'}
     if position==7
         if enemy>=0.1
             point=point+1;
@@ -176,7 +176,7 @@ case 'numpad7'
     else
         exit_game=1;
     end
-case 'numpad8'
+case {'numpad8','8'}
     if position==8
         if enemy>=0.1
             point=point+1;
@@ -190,7 +190,7 @@ case 'numpad8'
     else
         exit_game=1;
     end
-case 'numpad9'
+case {'numpad9','9'}
     if position==9
         if enemy>=0.1
             point=point+1;
